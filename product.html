@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dịch Vụ Nha Khoa</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="border-bottom py-3">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center">
+                    <div class="bg-secondary rounded-circle" style="width: 40px; height: 40px;"></div>
+                    <span class="ms-2 fw-medium">Dịch Vụ Nha Khoa</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="d-none d-md-flex align-items-center">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Trang Chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Giới Thiệu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Dịch Vụ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Liên Hệ</a>
+                        </li>
+                    </ul>
+                    <div class="position-relative ms-4">
+                        <input type="text" class="form-control form-control-sm" placeholder="Search in site">
+                        <i class="bi bi-search position-absolute end-0 top-50 translate-middle-y me-2"></i>
+                    </div>
+                </nav>
+                
+                <!-- Mobile Menu Button -->
+                <button class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div class="collapse navbar-collapse mt-3 d-md-none" id="mobileMenu">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Trang Chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Giới Thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Dịch Vụ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Liên Hệ</a>
+                    </li>
+                </ul>
+                <div class="position-relative mt-3">
+                    <input type="text" class="form-control" placeholder="Search in site">
+                    <i class="bi bi-search position-absolute end-0 top-50 translate-middle-y me-2"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="py-5 text-center">
+            <div class="container">
+                <h1 class="display-5 fw-bold mb-3">Khám Phá Dịch Vụ Nha Khoa</h1>
+                <p class="lead mb-4">Tìm các dịch vụ nha khoa tốt nhất dành cho bạn.</p>
+                <div class="d-flex flex-column flex-sm-row justify-content-center gap-3 mx-auto" style="max-width: 500px;">
+                    <button class="btn btn-outline-dark px-4 py-2">Yêu Cầu Báng Giá</button>
+                    <button class="btn btn-dark px-4 py-2">Khám Phá Ngay</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Packages -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="display-6 fw-bold mb-3">Gói Dịch Vụ</h2>
+                <p class="mb-4">Chọn gói dịch vụ phù hợp với nhu cầu của bạn.</p>
+                
+                <button class="btn btn-dark px-4 py-2 mb-5">Xem Tất Cả Dịch Vụ</button>
+                
+                <div class="row g-4">
+                    <!-- Package 1 -->
+                    <div class="col-md-6">
+                        <div class="card h-100 border-0">
+                            <div class="card-header bg-light p-4">
+                                <small class="d-block mb-2">Phổ Biến</small>
+                                <div class="text-center py-4">Gói dịch vụ cơ bản</div>
+                            </div>
+                            <div class="card-body border border-top-0">
+                                <h5 class="card-title">Gói Cơ Bản</h5>
+                                <p class="card-text fw-medium">1.000.000 VND</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Package 2 -->
+                    <div class="col-md-6">
+                        <div class="card h-100 border-0">
+                            <div class="card-header bg-light p-4">
+                                <small class="d-block mb-2">Đề Xuất</small>
+                                <div class="text-center py-4">Gói dịch vụ tiêu chuẩn</div>
+                            </div>
+                            <div class="card-body border border-top-0">
+                                <h5 class="card-title">Gói Tiêu Chuẩn</h5>
+                                <p class="card-text fw-medium">2.000.000 VND</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Package 3 -->
+                    <div class="col-md-6">
+                        <div class="card h-100 border-0">
+                            <div class="card-header bg-light p-4">
+                                <small class="d-block mb-2">Giá Trị Nhất</small>
+                                <div class="text-center py-4">Gói dịch vụ cao cấp</div>
+                            </div>
+                            <div class="card-body border border-top-0">
+                                <h5 class="card-title">Gói Cao Cấp</h5>
+                                <p class="card-text fw-medium">3.000.000 VND</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Package 4 -->
+                    <div class="col-md-6">
+                        <div class="card h-100 border-0">
+                            <div class="card-header bg-light p-4">
+                                <div class="text-center py-4">Gói dịch vụ tùy chỉnh</div>
+                            </div>
+                            <div class="card-body border border-top-0">
+                                <h5 class="card-title">Gói Tùy Chỉnh</h5>
+                                <p class="card-text fw-medium">Liên Hệ Chúng Tôi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="display-6 fw-bold mb-3">Tại Sao Chọn Chúng Tôi?</h2>
+                <p class="mb-5">Tìm hiểu về lý do chúng tôi là sự lựa chọn hàng đầu.</p>
+                
+                <div class="row g-4">
+                    <!-- Reason 1 -->
+                    <div class="col-12">
+                        <div class="d-flex gap-3">
+                            <div class="bg-light" style="width: 64px; height: 64px; flex-shrink: 0;"></div>
+                            <div>
+                                <h3 class="h5 fw-medium mb-2">Đội Ngũ Chuyên Nghiệp</h3>
+                                <p>Đội ngũ của chúng tôi gồm các chuyên gia trong lĩnh vực nha khoa.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Reason 2 -->
+                    <div class="col-12">
+                        <div class="d-flex gap-3">
+                            <div class="bg-light" style="width: 64px; height: 64px; flex-shrink: 0;"></div>
+                            <div>
+                                <h3 class="h5 fw-medium mb-2">Sự Hài Lòng Của Khách Hàng</h3>
+                                <p>Chúng tôi đặt nhu cầu của khách hàng lên hàng đầu.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Reason 3 -->
+                    <div class="col-12">
+                        <div class="d-flex gap-3">
+                            <div class="bg-light" style="width: 64px; height: 64px; flex-shrink: 0;"></div>
+                            <div>
+                                <h3 class="h5 fw-medium mb-2">Giá Cả Hợp Lý</h3>
+                                <p>Dịch vụ chất lượng với mức giá cạnh tranh.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-4 border-top">
+        <div class="container">
+            <div class="row gy-3">
+                <div class="col-md-4 text-center text-md-start">
+                    <p class="mb-0">© 2023 Dịch Vụ Nha Khoa</p>
+                </div>
+                <div class="col-md-8">
+                    <div class="d-flex flex-column flex-md-row justify-content-md-end gap-2 gap-md-4 text-center text-md-end">
+                        <p class="mb-0">Địa chỉ: 123 Đường Số 1, Quận 1, Tp.HCM</p>
+                        <p class="mb-0">Điện thoại: 0123 456 789</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
