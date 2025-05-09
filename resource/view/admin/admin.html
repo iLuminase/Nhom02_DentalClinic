@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Trị Hệ Thống - Nha Khoa 2B</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+        .sidebar {
+            width: 280px;
+            background-color: var(--primary-color, #0B6F7E);
+            color: var(--secondary-color, #fff);
+        }
+        .sidebar .nav-link {
+            color: var(--secondary-color, #fff);
+        }
+        .sidebar .nav-link:hover,
+        .sidebar .nav-link.active {
+            background-color: var(--footer-link-hover-color, #085865);
+        }
+        .main-content {
+            flex: 1;
+            padding: 20px;
+        }
+        .content-area {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="d-flex flex-grow-1">
+        <!-- Sidebar -->
+        <aside class="sidebar vh-100 d-flex flex-column p-3 sticky-top">
+            <a href="index.html" class="navbar-brand fw-bold mb-4 text-center text-white">Nha Khoa 2B Admin</a>
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li class="nav-item">
+                    <a href="#dashboard" class="nav-link active" data-bs-toggle="tab" data-bs-target="#dashboard-content">
+                        <i class="fas fa-tachometer-alt me-2"></i>Bảng Điều Khiển
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#services-management" class="nav-link" data-bs-toggle="tab" data-bs-target="#services-content">
+                        <i class="fas fa-tooth me-2"></i>Quản Lý Dịch Vụ
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#appointments" class="nav-link" data-bs-toggle="tab" data-bs-target="#appointments-content">
+                        <i class="fas fa-calendar-check me-2"></i>Quản Lý Lịch Hẹn
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#patients" class="nav-link" data-bs-toggle="tab" data-bs-target="#patients-content">
+                        <i class="fas fa-users me-2"></i>Quản Lý Khách Hàng
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#pricing-management" class="nav-link" data-bs-toggle="tab" data-bs-target="#pricing-admin-content">
+                        <i class="fas fa-dollar-sign me-2"></i>Quản Lý Bảng Giá
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#settings" class="nav-link" data-bs-toggle="tab" data-bs-target="#settings-content">
+                        <i class="fas fa-cog me-2"></i>Cài Đặt
+                    </a>
+                </li>
+            </ul>
+            <hr>
+            <div class="dropdown">
+                <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="https://via.placeholder.com/32" alt="" width="32" height="32" class="rounded-circle me-2">
+                    <strong>Admin User</strong>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser">
+                    <li><a class="dropdown-item" href="#">Hồ Sơ</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Đăng Xuất</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <div class="tab-content">
+                <!-- Dashboard Content -->
+                <div class="tab-pane fade show active" id="dashboard-content">
+                    <div class="content-area">
+                        <h1 class="h3 mb-4">Bảng Điều Khiển</h1>
+                        <p>Chào mừng đến với trang quản trị Nha Khoa 2B.</p>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card text-white bg-primary mb-3">
+                                    <div class="card-header">Lịch Hẹn Hôm Nay</div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">5 Lịch Hẹn</h5>
+                                        <a href="#appointments-content" class="text-white">Xem chi tiết <i class="fas fa-arrow-circle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card text-white bg-success mb-3">
+                                    <div class="card-header">Tổng Số Dịch Vụ</div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">12 Dịch Vụ</h5>
+                                        <a href="#services-content" class="text-white">Quản lý <i class="fas fa-arrow-circle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card text-white bg-info mb-3">
+                                    <div class="card-header">Khách Hàng Mới</div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">2 Khách Hàng</h5>
+                                        <a href="#patients-content" class="text-white">Xem danh sách <i class="fas fa-arrow-circle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add more dashboard widgets here -->
+                    </div>
+                </div>
+
+                <!-- Services Management Content -->
+                <div class="tab-pane fade" id="services-content">
+                    <div class="content-area">
+                        <h2 class="h4 mb-3">Quản Lý Dịch Vụ</h2>
+                        <button class="btn btn-success mb-3"><i class="fas fa-plus me-2"></i>Thêm Dịch Vụ Mới</button>
+                        <p>Đây là nơi để thêm, sửa, xóa các dịch vụ nha khoa.</p>
+                        <!-- Service table or list will go here -->
+                        <table class="table table-hover">
+                            <thead>
+                                <tr><th>Tên Dịch Vụ</th><th>Mô Tả Ngắn</th><th>Giá Cơ Bản</th><th>Hành Động</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Khám Răng Tổng Quát</td><td>Kiểm tra sức khỏe răng miệng.</td><td>200.000</td><td><button class="btn btn-sm btn-warning me-1"><i class="fas fa-edit"></i></button><button class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></button></td></tr>
+                                <!-- Add more services -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Appointments Management Content -->
+                <div class="tab-pane fade" id="appointments-content">
+                    <div class="content-area">
+                        <h2 class="h4 mb-3">Quản Lý Lịch Hẹn</h2>
+                        <p>Xem và quản lý các lịch hẹn đã đặt.</p>
+                        <!-- Appointments table or calendar will go here -->
+                    </div>
+                </div>
+
+                <!-- Patients Management Content -->
+                <div class="tab-pane fade" id="patients-content">
+                    <div class="content-area">
+                        <h2 class="h4 mb-3">Quản Lý Khách Hàng</h2>
+                        <p>Thông tin chi tiết về khách hàng.</p>
+                        <!-- Patients table or list will go here -->
+                    </div>
+                </div>
+
+                <!-- Pricing Management Content -->
+                <div class="tab-pane fade" id="pricing-admin-content">
+                    <div class="content-area">
+                        <h2 class="h4 mb-3">Quản Lý Bảng Giá</h2>
+                        <p>Cập nhật bảng giá dịch vụ. Có thể cho phép tải lên file JSON/Excel hoặc chỉnh sửa trực tiếp.</p>
+                        <!-- Pricing management interface -->
+                        <button class="btn btn-info mb-3"><i class="fas fa-upload me-2"></i>Tải Lên Bảng Giá (JSON/Excel)</button>
+                        <p>Hoặc chỉnh sửa bảng giá hiện tại:</p>
+                        <!-- Editable table or form for pricing -->
+                    </div>
+                </div>
+
+                <!-- Settings Content -->
+                <div class="tab-pane fade" id="settings-content">
+                    <div class="content-area">
+                        <h2 class="h4 mb-3">Cài Đặt Hệ Thống</h2>
+                        <p>Các cài đặt chung cho trang web.</p>
+                        <!-- Settings form will go here -->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Activate tab functionality for admin page
+        var triggerTabList = [].slice.call(document.querySelectorAll('.sidebar .nav-link'))
+        triggerTabList.forEach(function (triggerEl) {
+            var tabTrigger = new bootstrap.Tab(triggerEl)
+
+            triggerEl.addEventListener('click', function (event) {
+                event.preventDefault()
+                tabTrigger.show()
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dịch Vụ - Nha Khoa 2B</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../assets/css/styles.css"> <!-- Corrected path -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <main class="container py-5">
+        <h1 class="text-center mb-4">Dịch Vụ Của Chúng Tôi</h1>
+        <p class="text-center">Dưới đây là danh sách các dịch vụ nha khoa chất lượng cao mà chúng tôi cung cấp.</p>
+        
+        <!-- Example Service Cards - You can expand this section -->
+        <div class="row g-4 mt-4">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/300x200?text=Dịch+Vụ+1" class="card-img-top" alt="Dịch Vụ 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Niềng Răng</h5>
+                        <p class="card-text">Dịch vụ niềng răng thẩm mỹ, giúp bạn có hàm răng đều đẹp và nụ cười tự tin.</p>
+                        <a href="detail_service.html?service=nieng-rang" class="btn btn-primary">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/300x200?text=Dịch+Vụ+2" class="card-img-top" alt="Dịch Vụ 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Tẩy Trắng Răng</h5>
+                        <p class="card-text">Công nghệ tẩy trắng răng an toàn, hiệu quả, mang lại hàm răng trắng sáng.</p>
+                        <a href="detail_service.html?service=tay-trang-rang" class="btn btn-primary">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/300x200?text=Dịch+Vụ+3" class="card-img-top" alt="Dịch Vụ 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Cấy Ghép Implant</h5>
+                        <p class="card-text">Giải pháp phục hình răng đã mất tối ưu, bền vững với cấy ghép Implant.</p>
+                        <a href="detail_service.html?service=cay-ghep-implant" class="btn btn-primary">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+             <div class="col-md-4">
+                <div class="card h-100">
+                     <img src="https://via.placeholder.com/300x200?text=Dịch+Vụ+4" class="card-img-top" alt="Dịch Vụ 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Bọc Răng Sứ</h5>
+                        <p class="card-text">Phục hình răng thẩm mỹ, bảo vệ răng thật với dịch vụ bọc răng sứ.</p>
+                        <a href="detail_service.html?service=boc-rang-su" class="btn btn-primary">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+             <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/300x200?text=Dịch+Vụ+5" class="card-img-top" alt="Dịch Vụ 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Nhổ Răng Khôn</h5>
+                        <p class="card-text">Tiểu phẫu nhổ răng khôn không đau, an toàn và nhanh chóng.</p>
+                        <a href="detail_service.html?service=nho-rang-khon" class="btn btn-primary">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+             <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/300x200?text=Dịch+Vụ+6" class="card-img-top" alt="Dịch Vụ 6">
+                    <div class="card-body">
+                        <h5 class="card-title">Điều Trị Tủy</h5>
+                        <p class="card-text">Điều trị tủy răng hiệu quả, giúp bảo tồn răng thật tối đa.</p>
+                        <a href="detail_service.html?service=dieu-tri-tuy" class="btn btn-primary">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Add more service items here -->
+
+    </main>
+
+    <footer id="footer-placeholder"></footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../../../assets/js/script.js"></script> <!-- Corrected path -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Load header
+            fetch('../../../_header.html') // Corrected path
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok for header');
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                    // Active link highlighting
+                    const currentPagePath = window.location.pathname;
+                    const navLinks = document.querySelectorAll('#header-placeholder .nav-link');
+                    navLinks.forEach(link => {
+                        const linkHref = link.getAttribute('href');
+                        const cleanLinkHref = linkHref.startsWith('/') ? linkHref.substring(1) : linkHref;
+                        if (currentPagePath.endsWith(cleanLinkHref)) {
+                            link.classList.add('active');
+                            link.setAttribute('aria-current', 'page');
+                        } else {
+                            link.classList.remove('active');
+                            link.removeAttribute('aria-current');
+                        }
+                    });
+                })
+                .catch(error => console.error('Error loading header:', error));
+
+            // Load footer
+            fetch('../../../_footer.html') // Corrected path
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok for footer');
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading footer:', error));
+        });
+    </script>
+</body>
+
+</html>

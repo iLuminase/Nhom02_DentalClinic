@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng Giá Dịch Vụ - Nha Khoa 2B</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../assets/css/styles.css"> <!-- Corrected path -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <!-- Main Content -->
+    <main class="container py-5">
+        <header class="text-center mb-5">
+            <h1 class="fw-bold">Bảng Giá Dịch Vụ Nha Khoa</h1>
+            <p class="lead text-muted">Tham khảo bảng giá chi tiết cho các dịch vụ của chúng tôi.</p>
+        </header>
+
+        <section id="pricing-table">
+            <h2 class="text-center fw-bold mb-4">Bảng Giá Chi Tiết</h2>
+            <!-- Option 1: Table -->
+            <div class="table-responsive">
+                <table class="table table-striped table-hover table-bordered">
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Tên Dịch Vụ</th>
+                            <th scope="col">Mô Tả Ngắn</th>
+                            <th scope="col">Giá (VND)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Khám Răng Tổng Quát</td>
+                            <td>Kiểm tra sức khỏe răng miệng toàn diện.</td>
+                            <td>200.000 - 500.000</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Cạo Vôi Răng</td>
+                            <td>Làm sạch vôi và mảng bám.</td>
+                            <td>300.000 - 600.000</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Tẩy Trắng Răng</td>
+                            <td>Công nghệ tẩy trắng an toàn, hiệu quả.</td>
+                            <td>1.500.000 - 3.000.000</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>Trám Răng Thẩm Mỹ</td>
+                            <td>Phục hồi răng sâu, mẻ bằng vật liệu composite.</td>
+                            <td>400.000 - 800.000/răng</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>Nhổ Răng Khôn</td>
+                            <td>Tiểu phẫu nhổ răng khôn mọc lệch, ngầm.</td>
+                            <td>1.000.000 - 5.000.000/răng</td>
+                        </tr>
+                        <!-- Add more services as needed -->
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-center mt-3 text-muted"><i>Lưu ý: Bảng giá trên chỉ mang tính chất tham khảo, giá có thể thay đổi tùy thuộc vào tình trạng răng miệng cụ thể của mỗi khách hàng. Vui lòng liên hệ để được tư vấn chi tiết.</i></p>
+
+            <!-- Option 2: Image (Uncomment to use) -->
+            <!--
+            <div class="text-center mt-5">
+                <h3 class="fw-bold mb-3">Hoặc Xem Bảng Giá Dưới Dạng Hình Ảnh</h3>
+                <img src="../../../assets/images/bang-gia.jpg" alt="Bảng giá dịch vụ nha khoa" class="img-fluid rounded shadow"> <!-- Corrected image path if used -->
+            </div>
+            -->
+        </section>
+    </main>
+
+    <footer id="footer-placeholder"></footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../assets/js/script.js"></script> <!-- Corrected path -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Load header
+            fetch('../../../_header.html') // Corrected path
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok for header');
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                    // Active link highlighting
+                    const currentPagePath = window.location.pathname;
+                    const navLinks = document.querySelectorAll('#header-placeholder .nav-link');
+                    navLinks.forEach(link => {
+                        const linkHref = link.getAttribute('href');
+                        const cleanLinkHref = linkHref.startsWith('/') ? linkHref.substring(1) : linkHref;
+                        if (currentPagePath.endsWith(cleanLinkHref)) {
+                            link.classList.add('active');
+                            link.setAttribute('aria-current', 'page');
+                        } else {
+                            link.classList.remove('active');
+                            link.removeAttribute('aria-current');
+                        }
+                    });
+                })
+                .catch(error => console.error('Error loading header:', error));
+
+            // Load footer
+            fetch('../../../_footer.html') // Corrected path
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok for footer');
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading footer:', error));
+        });
+    </script>
+</body>
+</html>

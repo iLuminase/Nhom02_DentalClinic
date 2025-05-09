@@ -1,19 +1,75 @@
 /* Custom styles for Dental Service website */
 
 /* General styles */
+:root {
+    --primary-color:  rgb(11, 111, 126); /* New primary highlight color */
+    --secondary-color: #ffffff; /* White */
+    --text-color: #212529; /* Dark grey - almost black for good readability */
+    --footer-bg-color:  rgb(11, 111, 126);
+    --footer-text-color: #ffffff; /* White for footer text */
+    --navbar-bg-color: #ffffff; /* Powder Blue for testing custom navbar background */
+    --navbar-link-color: var(--text-color);
+    --navbar-link-hover-color: var(--primary-color); /* Updated to new primary */
+    --footer-link-color: var(--primary-color); /* Updated to new primary */
+    --footer-link-hover-color:  rgb(11, 111, 126); /* Darker shade of new primary */
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Heading styles */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-color);
 }
 
 /* Header styles */
+.navbar {
+    background-color: var(--navbar-bg-color) !important; /* Ensure custom background applies */
+    border: 10px solid var(--navbar-bg-color); /* Border color same as background */
+    border-radius: 0.375rem; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    padding: 0.5rem 1rem; 
+    margin-bottom: 20px; 
+    position: fixed; /* Change to fixed for sticky behavior */
+    top: 0; 
+    width: 100%; /* Ensure it spans the full width */
+    z-index: 1030; /* Ensure it stays above other elements */
+}
+
+body {
+    padding-top: 80px; /* Add padding to prevent navbar from overlapping content */
+}
+
 .nav-link {
-    color: #000;
+    color: var(--navbar-link-color);
     font-weight: 500;
     padding: 0.5rem 1rem;
 }
 
-.nav-link:hover {
-    color: #555;
+.nav-link:hover,
+.navbar-brand:hover {
+    color: var(--navbar-link-hover-color);
+}
+
+.navbar-brand {
+    color: var(--primary-color); /* Make navbar brand use primary color */
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--footer-link-hover-color); /* Darker blue */
+    border-color: var(--footer-link-hover-color);
+    color: var(--secondary-color);
 }
 
 /* Card styles */
@@ -32,9 +88,57 @@ body {
     font-weight: 500;
 }
 
+/* Changed .btn-outline-dark to be a blue button with white text */
+.btn-outline-dark {
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
 .btn-outline-dark:hover {
-    background-color: #f8f9fa;
-    color: #000;
+    color: var(--secondary-color);
+    background-color: var(--footer-link-hover-color); /* Darker blue for hover */
+    border-color: var(--footer-link-hover-color);
+}
+
+/* Changed .btn-dark to be a blue button with white text */
+.btn-dark {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-dark:hover {
+    background-color: var(--footer-link-hover-color); /* Darker blue for hover */
+    border-color: var(--footer-link-hover-color);
+    color: var(--secondary-color);
+}
+
+/* Footer styles  */
+/* #footer { */ /* Old selector */
+#footer-placeholder { /* Corrected selector to match the ID in HTML */
+    background: var(--footer-bg-color); /* Use the defined footer background color */
+    position: relative;
+    overflow: hidden;
+    color: var(--footer-text-color); /* Applied to text directly in footer, if any */
+    padding: 76px 0 50px 0px;
+}
+
+/* #footer p { */ /* Old selector */
+#footer-placeholder p { /* Corrected selector */
+    color: var(--footer-text-color);
+}
+
+/* #footer a { */ /* Old selector */
+#footer-placeholder a { /* Corrected selector */
+    color: var(--footer-link-color);
+    text-decoration: none; /* Remove underline from footer links */
+}
+
+/* #footer a:hover { */ /* Old selector */
+#footer-placeholder a:hover { /* Corrected selector */
+    color: var(--footer-link-hover-color);
+    text-decoration: underline; /* Add underline on hover for footer links */
 }
 
 /* Mobile menu */
@@ -54,4 +158,19 @@ body {
     .nav-link {
         padding: 0.5rem 1rem;
     }
+}
+
+/* Sticky footer styles */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+#footer-placeholder {
+    flex-shrink: 0; /* Prevent footer from shrinking */
 }
