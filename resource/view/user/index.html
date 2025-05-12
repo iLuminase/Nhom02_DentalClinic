@@ -4,124 +4,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dịch Vụ Nha Khoa 2B</title>
+    <title>Dịch Vụ Nha Khoa 2B - Trang Chủ</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../../assets/css/styles.css"> <!-- Corrected path -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../../assets/css/styles.css"> <!-- Ensure this path is correct -->
 </head>
 
 <body>
 
     <div id="header-placeholder"></div>
 
-    
-    <!-- Hero Section -->
-    <header class="bg-light-gray py-5 text-center">
+    <!-- Hero Section with Cover Image -->
+    <section id="hero" class="hero-section text-white text-center d-flex align-items-center">
         <div class="container">
-            <h1 class="fw-bold mb-3">Chăm Sóc Răng Miệng Chất Lượng</h1>
-            <p class="mb-4 mx-auto" style="max-width: 600px;">
-                Chúng tôi cung cấp dịch vụ nha khoa toàn diện với công nghệ hiện đại.
+            <img src="/assets/images/background2.webp" alt="">
+            <h1 class="display-4 fw-bold">Nụ Cười Hoàn Hảo, Cuộc Sống Tươi Sáng</h1>
+            <p class="lead my-4">
+                Phòng khám Nha Khoa 2B mang đến dịch vụ chăm sóc răng miệng toàn diện, chuyên nghiệp với công nghệ tiên tiến nhất.
             </p>
-            <div class="d-flex flex-column flex-sm-row justify-content-center gap-3 mx-auto" style="max-width: 400px;">
-                <a href="#" class="btn btn-outline-dark">Tìm Hiểu Thêm</a>
-                <a href="#" class="btn btn-dark">Đặt Lịch Hẹn</a>
-            </div>
+            <a href="#contact" class="btn btn-outline-secondary btn-lg">Dịch Vụ Của Chúng Tôi</a> <!-- Assuming #contact will be in footer or a contact page -->
+
+            <a href="#services" class="btn btn-primary btn-lg me-2">Đặt Lịch Hẹn</a>
         </div>
-    </header>
+    </section>
 
     <main>
         <!-- Services Section -->
-        <section id="services" class="py-5">
+        <section id="services" class="py-5 section-wrapper">
             <div class="container">
-                <h2 class="text-center fw-bold mb-3">Dịch Vụ Chúng Tôi</h2>
-                <p class="text-center mb-4">Khám răng, cạo vôi răng và nhiều dịch vụ khác.</p>
-                <div class="text-center mb-5">
-                    <a href="#" class="btn btn-dark">Xem Tất Cả Dịch Vụ</a>
-                </div>
-
+                <h2 class="text-center fw-bold mb-4 section-title">Dịch Vụ Nổi Bật</h2>
+                <p class="text-center text-muted mb-5">Khám phá các dịch vụ chăm sóc răng miệng chuyên nghiệp tại Nha Khoa 2B.</p>
                 <div class="row g-4">
                     <!-- Service Card 1 -->
-                    <div class="col-md-4">
-                        <div class="card service-card h-100">
-                            <div class="card-img-container">
-                                <span class="detail-badge">Chi tiết</span>
-                                <p class="text-center">Khám Răng</p>
-                            </div>
-                            <div class="card-body">
-                                <h3 class="card-title h5">Khám Răng</h3>
-                                <p class="card-text fw-bold">Giá: 500.000 VND</p>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card service-card h-100 shadow-sm">
+                            <img src="https://via.placeholder.com/400x250/E0F7FA/00796B?text=Khám+Răng+Tổng+Quát" class="card-img-top" alt="Khám Răng Tổng Quát">
+                            <div class="card-body text-center d-flex flex-column">
+                                <h3 class="card-title h5">Khám Răng Tổng Quát</h3>
+                                <p class="card-text small text-muted flex-grow-1">Kiểm tra sức khỏe răng miệng toàn diện, phát hiện sớm các vấn đề.</p>
+                                <p class="card-text fw-bold mt-auto">Giá: 500.000 VND</p>
+                                <a href="#" class="btn btn-outline-primary btn-sm mt-2">Xem Chi Tiết</a>
                             </div>
                         </div>
                     </div>
-
                     <!-- Service Card 2 -->
-                    <div class="col-md-4">
-                        <div class="card service-card h-100">
-                            <div class="card-img-container">
-                                <span class="detail-badge">Chi tiết</span>
-                                <p class="text-center">Cạo Vôi Răng</p>
-                            </div>
-                            <div class="card-body">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card service-card h-100 shadow-sm">
+                            <img src="https://via.placeholder.com/400x250/E0F7FA/00796B?text=Cạo+Vôi+Răng" class="card-img-top" alt="Cạo Vôi Răng">
+                            <div class="card-body text-center d-flex flex-column">
                                 <h3 class="card-title h5">Cạo Vôi Răng</h3>
-                                <p class="card-text fw-bold">Giá: 350.000 VND</p>
+                                <p class="card-text small text-muted flex-grow-1">Loại bỏ mảng bám, vôi răng, giúp răng sạch khỏe và sáng bóng.</p>
+                                <p class="card-text fw-bold mt-auto">Giá: 350.000 VND</p>
+                                <a href="#" class="btn btn-outline-primary btn-sm mt-2">Xem Chi Tiết</a>
                             </div>
                         </div>
                     </div>
-
                     <!-- Service Card 3 -->
-                    <div class="col-md-4">
-                        <div class="card service-card h-100">
-                            <div class="card-img-container">
-                                <span class="detail-badge">Chi tiết</span>
-                                <p class="text-center">Chụp X-quang</p>
-                            </div>
-                            <div class="card-body">
-                                <h3 class="card-title h5">Chụp X-quang</h3>
-                                <p class="card-text fw-bold">Giá: 200.000 VND</p>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card service-card h-100 shadow-sm">
+                            <img src="https://via.placeholder.com/400x250/E0F7FA/00796B?text=Tẩy+Trắng+Răng" class="card-img-top" alt="Tẩy Trắng Răng">
+                            <div class="card-body text-center d-flex flex-column">
+                                <h3 class="card-title h5">Tẩy Trắng Răng</h3>
+                                <p class="card-text small text-muted flex-grow-1">Mang lại hàm răng trắng sáng tự nhiên, an toàn và hiệu quả.</p>
+                                <p class="card-text fw-bold mt-auto">Giá: 1.200.000 VND</p>
+                                <a href="#" class="btn btn-outline-primary btn-sm mt-2">Xem Chi Tiết</a>
                             </div>
                         </div>
                     </div>
+                    <!-- Add more service cards as needed -->
+                </div>
+                <div class="text-center mt-5">
+                    <a href="#" class="btn btn-primary">Xem Tất Cả Dịch Vụ</a>
                 </div>
             </div>
         </section>
 
-        <!-- Why Choose Us Section -->
-        <section id="why-us" class="py-5">
+        <hr class="section-divider my-0"> <!-- Separator -->
+
+        <!-- Facilities Section -->
+        <section id="facilities" class="py-5 section-wrapper bg-light">
             <div class="container">
-                <h2 class="text-center fw-bold mb-3">Tại Sao Chọn Chúng Tôi?</h2>
-                <p class="text-center mb-5">Đội ngũ bác sĩ trình độ cao và trang thiết bị hiện đại.</p>
-
-                <div class="row g-4 justify-content-center">
-                    <div class="col-md-6">
-                        <div class="card h-100">
-                            <div class="card-body d-flex gap-3">
-                                <div class="feature-icon"></div>
-                                <div>
-                                    <h3 class="card-title h5 fw-bold mb-2">Chuyên Nghiệp</h3>
-                                    <p class="card-text small">Đội ngũ bác sĩ của chúng tôi có nhiều năm kinh nghiệm.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                <h2 class="text-center fw-bold mb-4 section-title">Cơ Sở Vật Chất Hiện Đại</h2>
+                <p class="text-center text-muted mb-5">Trải nghiệm dịch vụ nha khoa trong không gian thoải mái với trang thiết bị tiên tiến.</p>
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-6">
+                        <img src="https://via.placeholder.com/600x400/B2EBF2/00796B?text=Phòng+Khám+Hiện+Đại" class="img-fluid rounded shadow-lg" alt="Phòng khám hiện đại">
                     </div>
-
-                    <div class="col-md-6">
-                        <div class="card h-100">
-                            <div class="card-body d-flex gap-3">
-                                <div class="feature-icon"></div>
+                    <div class="col-lg-6">
+                        <ul class="list-unstyled">
+                            <li class="d-flex align-items-start mb-3">
+                                <i class="fas fa-check-circle fa-2x text-primary me-3 mt-1"></i>
                                 <div>
-                                    <h3 class="card-title h5 fw-bold mb-2">Công Nghệ Hiện Đại</h3>
-                                    <p class="card-text small">Chúng tôi sử dụng thiết bị và công nghệ tiên tiến nhất.
-                                    </p>
+                                    <h5 class="fw-semibold mb-1">Không Gian Thoáng Đãng</h5>
+                                    <p class="text-muted small">Phòng chờ và phòng điều trị được thiết kế rộng rãi, sạch sẽ, tạo cảm giác thư giãn.</p>
                                 </div>
-                            </div>
-                        </div>
+                            </li>
+                            <li class="d-flex align-items-start mb-3">
+                                <i class="fas fa-check-circle fa-2x text-primary me-3 mt-1"></i>
+                                <div>
+                                    <h5 class="fw-semibold mb-1">Thiết Bị Tối Tân</h5>
+                                    <p class="text-muted small">Sử dụng máy móc, công nghệ nha khoa mới nhất từ các thương hiệu uy tín.</p>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-start">
+                                <i class="fas fa-check-circle fa-2x text-primary me-3 mt-1"></i>
+                                <div>
+                                    <h5 class="fw-semibold mb-1">Quy Trình Vô Trùng Nghiêm Ngặt</h5>
+                                    <p class="text-muted small">Đảm bảo an toàn tuyệt đối cho khách hàng với quy trình khử khuẩn chuẩn y tế.</p>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
+
+        <hr class="section-divider my-0"> <!-- Separator -->
+
+        <!-- Dental Specialties Section -->
+        <section id="specialties" class="py-5 section-wrapper">
+            <div class="container">
+                <h2 class="text-center fw-bold mb-4 section-title">Chuyên Khoa Răng Miệng</h2>
+                <p class="text-center text-muted mb-5">Đội ngũ bác sĩ chuyên môn cao, giàu kinh nghiệm trong nhiều lĩnh vực nha khoa.</p>
+                <div class="row g-4">
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="card specialty-card text-center h-100 shadow-sm p-4">
+                            <i class="fas fa-tooth fa-3x text-primary mb-3"></i>
+                            <h5 class="fw-semibold">Nha Khoa Tổng Quát</h5>
+                            <p class="small text-muted">Khám, tư vấn, cạo vôi, trám răng...</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="card specialty-card text-center h-100 shadow-sm p-4">
+                            <i class="fas fa-teeth-open fa-3x text-primary mb-3"></i> <!-- Changed icon -->
+                            <h5 class="fw-semibold">Cấy Ghép Implant</h5>
+                            <p class="small text-muted">Phục hình răng đã mất hiệu quả, thẩm mỹ.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="card specialty-card text-center h-100 shadow-sm p-4">
+                            <i class="fas fa-smile-beam fa-3x text-primary mb-3"></i> <!-- Changed icon -->
+                            <h5 class="fw-semibold">Nha Khoa Thẩm Mỹ</h5>
+                            <p class="small text-muted">Tẩy trắng, bọc sứ, niềng răng...</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="card specialty-card text-center h-100 shadow-sm p-4">
+                            <i class="fas fa-child fa-3x text-primary mb-3"></i>
+                            <h5 class="fw-semibold">Nha Khoa Trẻ Em</h5>
+                            <p class="small text-muted">Chăm sóc răng miệng cho bé yêu.</p>
+                        </div>
+                    </div>
+                    <!-- Add more specialties as needed -->
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider my-0"> <!-- Separator -->
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-5 section-wrapper bg-light">
+            <div class="container">
+                <h2 class="text-center fw-bold mb-4 section-title">Khách Hàng Nói Gì Về Chúng Tôi</h2>
+                <p class="text-center text-muted mb-5">Lắng nghe những chia sẻ thực tế từ những khách hàng đã trải nghiệm dịch vụ.</p>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card testimonial-card h-100 shadow-sm">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="https://via.placeholder.com/60x60/00796B/FFFFFF?text=KH1" class="rounded-circle me-3" alt="Khách hàng 1">
+                                    <div>
+                                        <h6 class="card-title mb-0 fw-bold">Nguyễn Văn A</h6>
+                                        <small class="text-muted">Đã sử dụng dịch vụ Cạo Vôi Răng</small>
+                                    </div>
+                                </div>
+                                <p class="card-text fst-italic text-muted">"Dịch vụ rất tuyệt vời, bác sĩ tận tâm, cơ sở vật chất hiện đại. Tôi rất hài lòng!"</p>
+                                <div class="text-warning mt-auto">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card testimonial-card h-100 shadow-sm">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="https://via.placeholder.com/60x60/00796B/FFFFFF?text=KH2" class="rounded-circle me-3" alt="Khách hàng 2">
+                                    <div>
+                                        <h6 class="card-title mb-0 fw-bold">Trần Thị B</h6>
+                                        <small class="text-muted">Đã sử dụng dịch vụ Tẩy Trắng Răng</small>
+                                    </div>
+                                </div>
+                                <p class="card-text fst-italic text-muted">"Răng tôi trắng sáng hơn hẳn sau khi tẩy trắng tại đây. Sẽ giới thiệu cho bạn bè."</p>
+                                <div class="text-warning mt-auto">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card testimonial-card h-100 shadow-sm">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="https://via.placeholder.com/60x60/00796B/FFFFFF?text=KH3" class="rounded-circle me-3" alt="Khách hàng 3">
+                                    <div>
+                                        <h6 class="card-title mb-0 fw-bold">Lê Văn C</h6>
+                                        <small class="text-muted">Đã sử dụng dịch vụ Khám Tổng Quát</small>
+                                    </div>
+                                </div>
+                                <p class="card-text fst-italic text-muted">"Phòng khám sạch sẽ, bác sĩ tư vấn kỹ càng. Tôi cảm thấy rất yên tâm."</p>
+                                <div class="text-warning mt-auto">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more testimonials as needed -->
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer id="footer-placeholder"></footer>
@@ -129,48 +234,66 @@
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
-    <script src="../../../assets/js/script.js"></script> <!-- Corrected path -->
+    <script src="../../../assets/js/script.js"></script> <!-- Ensure this path is correct -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // Load header
-            fetch('../../../_header.html') // Ensure path is correct
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok for header');
-                    }
-                    return response.text();
-                })
-                .then(data => {
-                    document.getElementById('header-placeholder').innerHTML = data;
-                    // Active link highlighting
-                    const currentPagePath = window.location.pathname;
-                    const navLinks = document.querySelectorAll('#header-placeholder .nav-link');
-                    navLinks.forEach(link => {
-                        const linkHref = link.getAttribute('href');
-                        const cleanLinkHref = linkHref.startsWith('/') ? linkHref.substring(1) : linkHref;
-                        if (currentPagePath.endsWith(cleanLinkHref)) {
-                            link.classList.add('active');
-                            link.setAttribute('aria-current', 'page');
-                        } else {
-                            link.classList.remove('active');
-                            link.removeAttribute('aria-current');
+            function loadComponent(url, placeholderId, callback) {
+                fetch(url)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`Network response was not ok for ${url}`);
                         }
-                    });
-                })
-                .catch(error => console.error('Error loading header:', error));
+                        return response.text();
+                    })
+                    .then(data => {
+                        document.getElementById(placeholderId).innerHTML = data;
+                        if (callback) callback();
+                    })
+                    .catch(error => console.error(`Error loading ${url}:`, error));
+            }
 
-            // Load footer
-            fetch('../../../_footer.html') // Ensure path is correct
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok for footer');
+            loadComponent('../../../_header.html', 'header-placeholder', function() {
+                // Active link highlighting
+                const currentPagePath = window.location.pathname;
+                const navLinks = document.querySelectorAll('#header-placeholder .nav-link');
+
+                navLinks.forEach(link => {
+                    const linkHref = link.getAttribute('href');
+                    if (!linkHref) return;
+
+                    // Normalize current page path (remove index.html, ensure trailing slash for directories)
+                    let normalizedCurrentPath = currentPagePath.endsWith('index.html') ?
+                                                currentPagePath.substring(0, currentPagePath.lastIndexOf('/') + 1) :
+                                                currentPagePath;
+                    if (!normalizedCurrentPath.endsWith('/')) {
+                        normalizedCurrentPath += '/';
                     }
-                    return response.text();
-                })
-                .then(data => {
-                    document.getElementById('footer-placeholder').innerHTML = data;
-                })
-                .catch(error => console.error('Error loading footer:', error));
+                    
+                    // Normalize link href (resolve relative paths, remove index.html, ensure trailing slash)
+                    let normalizedLinkHref = new URL(linkHref, window.location.origin + window.location.pathname).pathname;
+                     if (normalizedLinkHref.endsWith('index.html')) {
+                        normalizedLinkHref = normalizedLinkHref.substring(0, normalizedLinkHref.lastIndexOf('/') + 1);
+                    }
+                    if (!normalizedLinkHref.endsWith('/')) {
+                        normalizedLinkHref += '/';
+                    }
+
+                    // Special case for root path
+                    const isRootLink = (linkHref === './' || linkHref === 'index.html' || linkHref === '/');
+                    const isCurrentPageRoot = (currentPagePath.endsWith('/index.html') || currentPagePath.split('/').pop() === '');
+
+
+                    if (normalizedLinkHref === normalizedCurrentPath || (isRootLink && isCurrentPageRoot)) {
+                        link.classList.add('active');
+                        link.setAttribute('aria-current', 'page');
+                    } else {
+                        link.classList.remove('active');
+                        link.removeAttribute('aria-current');
+                    }
+                });
+            });
+
+            loadComponent('../../../_footer.html', 'footer-placeholder');
         });
     </script>
 </body>
