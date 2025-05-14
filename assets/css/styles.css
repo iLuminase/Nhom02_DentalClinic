@@ -2,175 +2,198 @@
 
 /* General styles */
 :root {
-    --primary-color:  rgb(11, 111, 126); /* New primary highlight color */
-    --secondary-color: #ffffff; /* White */
-    --text-color: #212529; /* Dark grey - almost black for good readability */
-    --footer-bg-color:  rgb(11, 111, 126);
-    --footer-text-color: #ffffff; /* White for footer text */
-    --navbar-bg-color: #ffffff; /* Powder Blue for testing custom navbar background */
+    --primary-color: rgb(11, 111, 126);
+    --secondary-color: #ffffff;
+    --text-color: #212529;
+    --footer-bg-color: rgb(11, 111, 126);
+    --footer-text-color: #ffffff;
+    --navbar-bg-color: #ffffff;
     --navbar-link-color: var(--text-color);
-    --navbar-link-hover-color: var(--primary-color); /* Updated to new primary */
-    --footer-link-color: var(--primary-color); /* Updated to new primary */
-    --footer-link-hover-color:  rgb(11, 111, 126); /* Darker shade of new primary */
+    --navbar-link-hover-color: var(--primary-color);
+    --footer-link-color: #ffffff;
+    --footer-link-hover-color: #e0f7fa;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Arial', Helvetica, sans-serif;
     color: var(--text-color);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-/* Heading styles */
-h1, h2, h3, h4, h5, h6 {
-    color: var(--primary-color);
-}
-
 /* Header styles */
 .navbar {
-    background-color: var(--navbar-bg-color) !important; /* Ensure custom background applies */
-    border: 10px solid var(--navbar-bg-color); /* Border color same as background */
-    border-radius: 0.375rem; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-    padding: 0.5rem 1rem; 
-    margin-bottom: 20px; 
-    position: fixed; /* Change to fixed for sticky behavior */
-    top: 0; 
-    width: 100%; /* Ensure it spans the full width */
-    z-index: 1030; /* Ensure it stays above other elements */
+    background: linear-gradient(45deg, var(--navbar-bg-color), #f8f9fa) !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+    transition: all 0.3s ease;
 }
 
 body {
-    padding-top: 80px; /* Add padding to prevent navbar from overlapping content */
+    padding-top: 90px;
+}
+
+.navbar-brand {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    transition: color 0.3s ease;
+}
+
+.brand-highlight {
+    color: #0288d1;
+    font-weight: 700;
 }
 
 .nav-link {
     color: var(--navbar-link-color);
     font-weight: 500;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.2rem !important;
+    position: relative;
+    transition: all 0.3s ease;
 }
 
-.nav-link:hover,
-.navbar-brand:hover {
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--navbar-link-hover-color);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link:hover {
     color: var(--navbar-link-hover-color);
 }
 
-.navbar-brand {
-    color: var(--primary-color); /* Make navbar brand use primary color */
-}
-
-.btn-primary {
+.appointment-btn {
     background-color: var(--primary-color);
     border-color: var(--primary-color);
-    color: var(--secondary-color);
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
 }
 
-.btn-primary:hover {
-    background-color: var(--footer-link-hover-color); /* Darker blue */
-    border-color: var(--footer-link-hover-color);
-    color: var(--secondary-color);
+.appointment-btn:hover {
+    background-color: #0288d1;
+    border-color: #0288d1;
+    transform: translateY(-2px);
 }
 
-/* Card styles */
-.card-header {
-    background-color: #d9d9d9;
-    border-radius: 0.375rem 0.375rem 0 0 !important;
-}
-
-.card-body {
-    border-radius: 0 0 0.375rem 0.375rem !important;
-}
-
-/* Button styles */
-.btn {
-    border-radius: 0.25rem;
-    font-weight: 500;
-}
-
-/* Changed .btn-outline-dark to be a blue button with white text */
-.btn-outline-dark {
-    color: var(--secondary-color);
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
-}
-
-.btn-outline-dark:hover {
-    color: var(--secondary-color);
-    background-color: var(--footer-link-hover-color); /* Darker blue for hover */
-    border-color: var(--footer-link-hover-color);
-}
-
-/* Changed .btn-dark to be a blue button with white text */
-.btn-dark {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    border-color: var(--primary-color);
-}
-
-.btn-dark:hover {
-    background-color: var(--footer-link-hover-color); /* Darker blue for hover */
-    border-color: var(--footer-link-hover-color);
-    color: var(--secondary-color);
-}
-
-/* Footer styles  */
-/* #footer { */ /* Old selector */
-#footer-placeholder { /* Corrected selector to match the ID in HTML */
-    background: var(--footer-bg-color); /* Use the defined footer background color */
-    position: relative;
-    overflow: hidden;
-    color: var(--footer-text-color); /* Applied to text directly in footer, if any */
-    padding: 76px 0 50px 0px;
-}
-
-/* #footer p { */ /* Old selector */
-#footer-placeholder p { /* Corrected selector */
+/* Footer styles */
+#footer-placeholder {
+    background: linear-gradient(180deg, var(--footer-bg-color), #01579b);
     color: var(--footer-text-color);
+    padding: 60px 0 40px;
 }
 
-/* #footer a { */ /* Old selector */
-#footer-placeholder a { /* Corrected selector */
+.footer-title {
+    color: var(--footer-text-color);
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.footer-title::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background-color: var(--footer-link-hover-color);
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+
+.footer-text {
+    color: var(--footer-text-color);
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+#footer-placeholder a {
     color: var(--footer-link-color);
-    text-decoration: none; /* Remove underline from footer links */
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-/* #footer a:hover { */ /* Old selector */
-#footer-placeholder a:hover { /* Corrected selector */
+#footer-placeholder a:hover {
     color: var(--footer-link-hover-color);
-    text-decoration: underline; /* Add underline on hover for footer links */
+    text-decoration: none;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: var(--footer-text-color);
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: var(--footer-link-hover-color);
+    color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.copyright {
+    font-size: 0.9rem;
+    opacity: 0.8;
 }
 
 /* Mobile menu */
 @media (max-width: 767.98px) {
-    .navbar-toggler {
-        border: none;
-        padding: 0;
+    .navbar {
+        padding: 0.75rem 0;
     }
-    
-    .navbar-toggler:focus {
-        box-shadow: none;
+
+    .navbar-collapse {
+        background-color: var(--navbar-bg-color);
+        padding: 1rem;
+        border-radius: 0.5rem;
+        margin-top: 0.5rem;
+    }
+
+    .nav-link {
+        padding: 0.75rem 1rem !important;
+    }
+
+    .appointment-btn {
+        margin: 1rem;
+        width: fit-content;
     }
 }
 
 /* Responsive adjustments */
 @media (min-width: 768px) {
     .nav-link {
-        padding: 0.5rem 1rem;
+        padding: 0.5rem 1.2rem !important;
     }
 }
 
 /* Sticky footer styles */
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
 main {
     flex: 1;
 }
 
 #footer-placeholder {
-    flex-shrink: 0; /* Prevent footer from shrinking */
+    flex-shrink: 0;
 }
