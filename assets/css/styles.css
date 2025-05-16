@@ -57,9 +57,24 @@ body {
 }
 
 .navbar-brand {
-    color: var(--primary-color); /* Make navbar brand use primary color */
+    color: var(--primary-color); 
+}
+#hero {
+    background-image: url('/assets/images/background2.webp');  
+    color: var(--text-color);
+    background-size: cover;  
+    background-position: center center; /* Căn giữa ảnh nền */
+    background-repeat: no-repeat; /* Không lặp lại ảnh nền */
+    min-height: 70vh;
 }
 
+#hero .container p{
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    height: 100%; /* Chiều cao 100% của hero */
+    color: var(--text-color);
+}
 .btn-primary {
     background-color: var(--primary-color);
     border-color: var(--primary-color);
@@ -174,3 +189,89 @@ main {
 #footer-placeholder {
     flex-shrink: 0; /* Prevent footer from shrinking */
 }
+
+/* BEGIN STYLES FROM detail_styles.css */
+
+/* Avatar and icons */
+.avatar-circle {
+    width: 32px;
+    height: 32px;
+    background-color: #d9d9d9;
+    border-radius: 50%;
+}
+
+.avatar-small {
+    width: 32px;
+    height: 32px;
+    background-color: #d9d9d9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Search input */
+.search-input {
+    padding-right: 30px;
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6c757d;
+}
+
+/* Hero section specific to detail pages - consider if this conflicts with existing #hero */
+.hero-section {
+    background-color: #4a4a4a;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+/* Tab buttons */
+.btn-tab {
+    background-color: #d9d9d9;
+    border: none;
+    color: #000;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+}
+
+.btn-tab:hover {
+    background-color: #c4c4c4;
+    color: #000;
+}
+
+.btn-tab.active {
+    background-color: #c4c4c4;
+    color: #000;
+}
+
+/* Service icons */
+.service-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+/* Responsive adjustments for detail_styles content */
+@media (max-width: 767.98px) {
+    .hero-section { /* This might need to be namespaced if #hero is also used on detail pages */
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    
+    .btn-tab {
+        padding: 0.4rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* END STYLES FROM detail_styles.css */
